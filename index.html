@@ -1,0 +1,175 @@
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+<h1><marquee behavior ="scroll" direction ="up"><font color ="blue"> DBMS </font></marquee></h1><br><br> 
+<h2> 
+<nav>
+<ol type="1"> 
+<li><a href="#lossless">LOSS LESS JOIN DECOMPOSITION </a></li> 
+<li><a href="#inde"> DATA INDEPENDENCE </a></li> 
+<li><a href="#existence">EXISTENCE DEPENDENCIES </a></li> 
+<li><a href="#func"> FUNCTIONAL DEPENDENCIES </a></li> 
+<li><a href="#normalize">NORMALIZATION </a></li> 
+<li><a href="#acid"> TRANSACTIONS </a></li> 
+</ol> 
+</nav></h2><br><br> 
+
+<section id="lossless"> 
+<div class="container">
+  <h2>DBMS </h2>
+  <!-- Button to Open the Modal -->
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+    Open modal
+  </button>
+
+  <!-- The Modal -->
+  <div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">LOSS LESS JOIN DECOMPOSITION </h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          There are 2 rels r1 and r2   such that for all atributes in r1 and r2 , we have   r1    u   r2 ----> r1    <br> 
+and r1   u    r2 ---> r2 holding good . dependency preservation occurs herein <br><br> 
+<a target="_blank" href="https://www.knowledgegate.ai/blog/lossless-join-decomposition-mcqs-solved-questions-with-explanations"><img src="https://cdn.knowledgegate.ai/blog-assets/blog_asset_1784537525467_j3swc8.jpg" alt="h" width ="350" height ="350"></a> 
+<br> 
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Contd. </button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+</div>
+<br><br> 
+</section>
+<br><br> 
+<section id ="inde"> 
+<h2><a target="_blank" href="#data independence"> data independence </a> : ability to modify schema defn. in one level <br> 
+without effecting schema defn. in next higher level of database , foll. from data abstraction, attribute inheritance , polymorphism <br> 
+logical data independence : ability to modify logical schema without causing application programs to be rewritten <br> 
+logical data independence is difficult to achieve as application programs are dependent on logical structure of data they access <br> 
+<a target="_blank" href="https://www.educative.io/answers/what-is-logical-data-independence"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWeg0VNNeF5q6A9vWr7_eNBHRyL8yc1bLWp52tgsKpOEUmEB1DukoHPGo&s=10" alt="h" width="350" height="350"></a> 
+<br></h2> 
+</section> 
+<br><br> 
+<section id="existence"> 
+<h2><a target="_blank" href="#existence dependency"> existence dependency </a> : we have a rel schema r where for all functional <br> 
+dependencies on  r , the functional dependency x-->y such that if operationally y is deleted , so is x. y is dominant entity <br>, 
+x is  subordinate entity . dependency preservation occurs herein <br> 
+<a target="_blank" href="https://www.researchgate.net/figure/Existence-dependency_fig1_220711168"><img src="https://www.researchgate.net/publication/220711168/figure/fig1/AS:341612170367031@1458458096757/Existence-dependency.png" alt="h" width="350" height="350"></a> 
+<br></h2> 
+</section> 
+<br><br> 
+<section id="func"> 
+<h2> types of <a target="_blank" href="#functional dependencies">functional dependencies </a> : <br> 
+<ol type="1">
+<li> full functional dependency--- all non key attributes are wholly dependent on key attribute </li> 
+<li> partial functional dependency --- some non key attributes are dependent on  key attribute and remaining non key attributes <br> 
+are dependent on key attribute and on some other non key attributes </li> 
+<li> transitive dependency---if attributes in  key col of 1 rel correspond to the key atributes in col of another rel </li> 
+<li> multi valued dependency --- in 4 NF </li> 
+<li> join dependency --- in   5 NF </li> 
+</ol> 
+</h2> 
+<br> 
+<h2><a target="_blank" href="https://www.geeksforgeeks.org/dbms/what-is-functional-dependency-in-dbms/"><img src="https://media.geeksforgeeks.org/wp-content/uploads/20250116121541620377/determinant.webp" alt="g" width="350" height="350"></a>
+</h2> 
+</section> 
+<br><br> 
+<section id="normalize"> 
+<h2> removal of data redundancy from tables or rels is <a target="_blank" href="#normalization"> normalization</a> <br> 
+while 1 nf has redundant data that is removed to some extent in  2nf <br> 
+still higher normal form is BCNF  that defines super key values . all rels in  3NF  are in BCNF  but the reverse is not always true<br> 
+there 's a rel schema r where for all functional dependencies f on  r , can find a <-- r and b <--- r s.t  a --->b is a trivial dependency in  f+ , s.t   at least <br> 
+one of foll. is true :<br> a ---->b is a trivial dependency in  r <br> 
+a is a super key to r <br><br> 
+still higher nf is 3NF  that defines candidate key values , transitive dependencies .there 's a rel schema r where for all functional dependencies f on  r , can find a <-- r and b <--- r s.t  a --->b is a trivial dependency in  f+ , s.t   at least <br> 
+one of foll. is true :<br> a ---->b is a trivial dependency in  r <br> 
+a is a super key to r<br> 
+can find an extraneous atribute in [b-a], that is contained in a candidate key for r <br><br> 
+4NF  defines multi valued dependencies <br> 
+5NF  defines join dependencies <br><br> 
+</h2> 
+<br>
+</section> 
+<br> 
+<section id="acid"> 
+<h2> 
+Transactions --- a transaction is a unit of program execution   that accesses and –or possibly updates various data items . Acid properties of a transaction   are : 
+
+Atomicity --- either transaction executes in  entirety or none executes at all <br>
+Consistency --- state of database remains same both before and after transaction despite system changes<br> 
+Isolation --- despite concurrent execution  of transactions  , each transaction  proceeds independently of others despite  system changes <br>
+Durability --- any modifications made to database as a result of transaction persist even if there are system changes <br><br>
+ 
+ e.gs there’s a schedule involving 2 accounts a and b . initial values in  a and b are$ 1000 and $ 2000 .a transaction occurs that transfers $ 50 from  a -b as a result ,<br>
+ final values in  a and b become $ 950 and $ 2050 , clearly a consistent state , as sum a+b is preserved both before <br>
+& after transaction . we thereafter suppose that a hd crash occurs after write –a committed but before write –b committed .<br>
+ now, final values in a and b accounts  become $ 950 and$ 2000 , clearly  inconsistent state , as sum a+b is no more preserved both before and after transaction.  Even if system failure did not occurs and transaction <br>
+ proceeded to completion,  this inconsistent state would not have been visible except during occurrence of transaction.<br>
+ This again  highlights atomicity . isolation is preserved . durability is preserved through recovery mgmt.  component of transactions<br>
+</h2> 
+<h2> 
+<a target="_blank" href="https://www.gatevidyalay.com/acid-properties/"><img src="https://www.gatevidyalay.com/wp-content/uploads/2018/05/Transaction-States-in-DBMS.png" alt="h" width="350" height="350"></a>
+</h2> 
+<br>
+</section> 
+ <br> 
+<br> 
+
+<div id="demo" class="carousel slide" data-ride="carousel">
+
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
+  
+  <!-- The slideshow -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://static.afteracademy.com/images/what-is-a-schema-three-levels-of-schema-84a896db453efdac.jpg" alt="Los Angeles" width="1100" height="500">
+    </div>
+    <div class="carousel-item">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMPNuh-zjj1MLZjlDLLCBdXlWqxnpMRXCyJWN_GcdPKg&s=10" alt="Chicago" width="1100" height="500">
+    </div>
+    <div class="carousel-item">
+      <img src="https://media.geeksforgeeks.org/wp-content/uploads/20260404155940085708/types_of_decision_tree_algorithms-1.webp" alt="New York" width="1100" height="500">
+    </div>
+  </div>
+  
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div>
+
+ <br>
+
+
+
+</body>
+</html>
